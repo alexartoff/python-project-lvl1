@@ -1,17 +1,11 @@
 # This workflow will lint python code
 
 name: my linter
-
 on:
   push:
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-      matrix:
-        python-version: ["3.8", "3.9", "3.10"]
-
     steps:
     - name: Lint with flake8
       run: |
