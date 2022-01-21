@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "hexlet-code"
+version = "0.1.0"
+description = "prog-lvl1"
+authors = ["alexandertarakanov <alex.artoff@gmail.com>"]
+packages = [{ include = "brain_games" },]
+
+[tool.poetry.scripts]
+brain-games = "brain_games.scripts.brain_games:main"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
