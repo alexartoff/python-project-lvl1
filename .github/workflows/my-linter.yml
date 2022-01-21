@@ -1,12 +1,10 @@
 # This workflow will lint python code
 
 name: my linter
-on:
-  push:
+on: push
 jobs:
-  build:
+  build-job:
     runs-on: ubuntu-latest
     steps:
     - name: Lint with flake8
-      run: |
-        poetry run flake8 brain_games
+      run: poetry run flake8 brain_games
