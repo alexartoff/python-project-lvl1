@@ -10,7 +10,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install poetry
-        make install
+        poetry install
     - name: Lint with flake8
       run: |
-        make lint
+        poetry run flake8 brain_games
