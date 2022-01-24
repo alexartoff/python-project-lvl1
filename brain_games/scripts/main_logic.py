@@ -47,7 +47,9 @@ def check_answer(ans, cor_bl, user, counter):
             print("Correct!\nCongratulations, {}!".format(user))
         return True
     else:
-        print("'{}' is wrong answer ;(. Correct answer was '{}'.\nLet's try again, {}!".format(ans, anti_answer(ans), user))
+        print("'{}' is wrong answer ;(. Correct answer was '{}'.\
+            ".format(ans, anti_answer(ans)))
+        print("Let's try again, {}!".format(user))
         return False
 
 
@@ -59,5 +61,7 @@ def check_answer_calc(ans, cor, user, counter):
             print("Correct!\nCongratulations, {}!".format(user))
         return True
     else:
-        print("'{}' is wrong answer ;(. Correct answer was '{}'.\nLet's try again, {}!".format(ans, cor, user))
+        print("'{}' is wrong answer ;(. Correct answer was '{}'.\
+            ".format(ans, cor))
+        print("Let's try again, {}!".format(user))
         return False
