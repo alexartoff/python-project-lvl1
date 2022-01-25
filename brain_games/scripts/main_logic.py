@@ -14,19 +14,19 @@ def welcome_message():
         return user_name
 
 
-def guess_number(game_number, user, counter):
+def guess_number_even(game_number, user, counter):
     print("Question:", game_number)
     answer = input("Your answer: ")
-    if check_answer(answer, be.is_even(game_number), user, counter):
+    if check_answer_even(answer, be.is_even(game_number), user, counter):
         return True
     else:
         return False
 
 
-def guess_number_calc(game_number, correct, user, counter):
+def guess_number(game_number, correct, user, counter):
     print("Question:", game_number)
     answer = input("Your answer: ")
-    if check_answer_calc(answer, correct, user, counter):
+    if check_answer(answer, correct, user, counter):
         return True
     else:
         return False
@@ -39,7 +39,7 @@ def anti_answer(ans):
         return 'yes'
 
 
-def check_answer(ans, cor_bl, user, counter):
+def check_answer_even(ans, cor_bl, user, counter):
     if (ans == 'yes' and cor_bl) or (ans == 'no' and not cor_bl):
         if counter < 2:
             print("Correct!")
@@ -53,7 +53,7 @@ def check_answer(ans, cor_bl, user, counter):
         return False
 
 
-def check_answer_calc(ans, cor, user, counter):
+def check_answer(ans, cor, user, counter):
     if int(ans) == cor:
         if counter < 2:
             print("Correct!")

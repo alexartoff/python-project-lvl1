@@ -19,7 +19,7 @@ def calc():
                                         calc_game_second_number))
         correct_answer = operands[oper](calc_game_first_number,
                                         calc_game_second_number)
-        if ml.guess_number_calc(expression, correct_answer, user, counter):
+        if ml.guess_number(expression, correct_answer, user, counter):
             counter += 1
         else:
             break
