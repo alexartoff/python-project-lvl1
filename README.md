@@ -17,3 +17,6 @@ brain-gcd game (greatest common divisor)
 
 brain-progression game (arithmetic)
 [![asciicast](https://asciinema.org/a/McAe5yDhKBWdguZIuKZ52G04W.svg)](https://asciinema.org/a/McAe5yDhKBWdguZIuKZ52G04W)
+
+brain-prime game
+[![asciicast](https://asciinema.org/a/N3SL7Z43yCDAIxi9cO2hAk8f7.svg)](https://asciinema.org/a/N3SL7Z43yCDAIxi9cO2hAk8f7)

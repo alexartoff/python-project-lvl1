@@ -16,7 +16,10 @@ def even_refactor():
     print('Answer "yes" if the number is even, otherwise answer "no".')
     while counter < ml.GAME_ROUND:
         even_game_number = randint(1, 100)
-        if ml.guess_number_even(even_game_number, user, counter):
+        if ml.guess_number_yes(even_game_number,
+                               is_even(even_game_number),
+                               user,
+                               counter):
             counter += 1
         else:
             break

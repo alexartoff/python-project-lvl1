@@ -1,4 +1,3 @@
-from brain_games.games import brain_even as be
 import prompt
 
 
@@ -14,10 +13,10 @@ def welcome_message():
         return user_name
 
 
-def guess_number_even(game_number, user, counter):
+def guess_number_yes(game_number, correct, user, counter):
     print("Question:", game_number)
     answer = input("Your answer: ")
-    if check_answer_even(answer, be.is_even(game_number), user, counter):
+    if check_answer_yes(answer, correct, user, counter):
         return True
     else:
         return False
@@ -39,7 +38,7 @@ def anti_answer(ans):
         return 'yes'
 
 
-def check_answer_even(ans, cor_bl, user, counter):
+def check_answer_yes(ans, cor_bl, user, counter):
     if (ans == 'yes' and cor_bl) or (ans == 'no' and not cor_bl):
         if counter < 2:
             print("Correct!")

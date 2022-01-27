@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.1.3"
+version = "0.1.4"
 description = "prog-lvl1"
 authors = ["alexandertarakanov <alex.artoff@gmail.com>"]
 packages = [{ include = "brain_games" },]
@@ -11,6 +11,7 @@ brain-even = "brain_games.games.brain_even:main"
 brain-calc = "brain_games.games.brain_calc:main"
 brain-gcd = "brain_games.games.brain_gcd:main"
 brain-progression = "brain_games.games.brain_progression:main"
+brain-prime = "brain_games.games.brain_prime:main"
 
 [tool.poetry.dependencies]
 python = "^3.8"
