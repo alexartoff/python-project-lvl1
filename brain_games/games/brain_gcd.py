@@ -4,18 +4,30 @@ from brain_games.scripts import main_logic as ml
 
 
 def find_gcd(a, b):
+    """
+    функция находит наибольший общий делитель для двух чисел
+
+    Returns
+    -------
+    возвращает НОД
+    """
     while a != b:
         if a > b:
             a = a - b
-            # print(">", a, b)
         else:
             b = b - a
-            # print("<", a, b)
     else:
         return a
 
 
 def gcd():
+    """
+    функция выводит приветствие, затем задание
+    передаёт сгенерированные числа функции find_gcd и получает от нее НОД,
+    который присваивает переменной correct
+    пока выполняется условие функции guess_number игра продолжается
+    в случае ошибки (функция guess_number возвращает False) игра прекращается
+    """
     user = ml.welcome_message()
     counter = 0
     print('Find the greatest common divisor of given numbers.')

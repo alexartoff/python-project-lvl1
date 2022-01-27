@@ -6,6 +6,14 @@ user_name = 'none'
 
 
 def welcome_message():
+    """
+    функция вывода приветствия
+    запроса имени пользователя в переменную user_name
+
+    Returns
+    -------
+    возвращает имя пользователя
+    """
     print('Welcome to the Brain Games!')
     user_name = prompt.string('May I have your name? ')
     if user_name:
@@ -13,16 +21,22 @@ def welcome_message():
         return user_name
 
 
-def guess_number_yes(game_number, correct, user, counter):
-    print("Question:", game_number)
-    answer = input("Your answer: ")
-    if check_answer_yes(answer, correct, user, counter):
-        return True
-    else:
-        return False
-
-
 def guess_number(game_number, correct, user, counter):
+    """
+    функция выводит пользователю вопрос в зависимости от запущенной игры
+
+    Parameters
+    ----------
+    game_number - вывод задания
+    correct - правильный ответ
+    user - имя пользователя (передаётся дальше в функцию check_answer)
+    counter - счетчик раундов (передаётся дальше в функцию check_answer)
+
+    Returns
+    -------
+    возвращает результат проверки правильности введенного ответа
+    для дальнейшего продолжени игры
+    """
     print("Question:", game_number)
     answer = input("Your answer: ")
     if check_answer(answer, correct, user, counter):
@@ -32,6 +46,17 @@ def guess_number(game_number, correct, user, counter):
 
 
 def anti_answer(ans):
+    """
+    функция инвертирует ответ при выводе текста ошибки
+
+    Parameters
+    ----------
+    ans - ответ, который нужно инвертировать
+
+    Returns
+    -------
+    возвращает инвертированный ответ
+    """
     if ans == 'yes':
         return 'no'
     elif ans == 'no':
@@ -39,6 +64,21 @@ def anti_answer(ans):
 
 
 def check_answer_yes(ans, cor_bl, user, counter):
+    """
+    функция проверки правильности введенного пользователем текстового ответа
+
+    Parameters
+    ----------
+    ans - введенный ответ
+    cor_bl - правильный ответ в булевом типе (bool)
+    user - имя пользователя
+    counter - счетчик раундов
+
+    Returns
+    -------
+    возвращает результат проверки в булевом типе
+    и выводит соответствующие сообщения пользователю на экран
+    """
     if (ans == 'yes' and cor_bl) or (ans == 'no' and not cor_bl):
         if counter < 2:
             print("Correct!")
@@ -53,6 +93,21 @@ def check_answer_yes(ans, cor_bl, user, counter):
 
 
 def check_answer(ans, cor, user, counter):
+    """
+    функция проверки правильности введенного пользователем числового ответа
+
+    Parameters
+    ----------
+    ans - введенный ответ
+    cor - правильный ответ в числовом типе (int)
+    user - имя пользователя
+    counter - счетчик раундов
+
+    Returns
+    -------
+    возвращает результат проверки в булевом типе
+    и выводит соответствующие сообщения пользователю на экран
+    """
     if int(ans) == cor:
         if counter < 2:
             print("Correct!")

@@ -4,6 +4,13 @@ from brain_games.scripts import main_logic as ml
 
 
 def arfm_progr():
+    """
+    функция выводит приветствие, затем задание
+    формирует арифметическую прогрессию произвольной длины (от 5 до 10)
+    с произвольно пропущенным элементом (не крайним)
+    пока выполняется условие функции guess_number игра продолжается
+    в случае ошибки (функция guess_number возвращает False) игра прекращается
+    """
     user = ml.welcome_message()
     counter = 0
     print('What number is missing in the progression?')
