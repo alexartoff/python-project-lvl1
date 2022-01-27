@@ -39,10 +39,16 @@ def guess_number(game_number, correct, user, counter):
     """
     print("Question:", game_number)
     answer = input("Your answer: ")
-    if check_answer(answer, correct, user, counter):
-        return True
+    if answer == "yes" or answer == "no":
+        if check_answer_yes(answer, correct, user, counter):
+            return True
+        else:
+            return False
     else:
-        return False
+        if check_answer(answer, correct, user, counter):
+            return True
+        else:
+            return False
 
 
 def anti_answer(ans):
