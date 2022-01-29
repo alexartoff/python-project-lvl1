@@ -1,9 +1,14 @@
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/alexartoff/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/alexartoff/python-project-lvl1/actions)
-### CodeClimat Maintainability
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-### Workflow linter test
-![Linter Flake8 workflow](https://github.com/alexartoff/python-project-lvl1/actions/workflows/my-linter.yml/badge.svg)
+Hexlet tests and linter status [![Actions Status](https://github.com/alexartoff/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/alexartoff/python-project-lvl1/actions)
+CodeClimate Maintainability [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/alexartoff/python-project-lvl1)
+Workflow linter test ![Linter Flake8 workflow](https://github.com/alexartoff/python-project-lvl1/actions/workflows/my-linter.yml/badge.svg)
+
+### INTRO
+Учебный проект "Игры разума" онлайн-школы hexlet.io, состоящий из пяти консольных игр
+Для установки необходим Python3.8+
+Демонстрация установки и самих игр см.ниже
+
+### HOW INSTALL
+[![asciicast](https://asciinema.org/a/pw9nquiRNlNNL90xMmAk53rfF.svg)](https://asciinema.org/a/pw9nquiRNlNNL90xMmAk53rfF)
 
 ### HOW PLAY
 brain-even game
