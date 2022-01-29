@@ -1,6 +1,9 @@
-Hexlet tests and linter status [![Actions Status](https://github.com/alexartoff/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/alexartoff/python-project-lvl1/actions)
-CodeClimate Maintainability [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/alexartoff/python-project-lvl1)
-Workflow linter test ![Linter Flake8 workflow](https://github.com/alexartoff/python-project-lvl1/actions/workflows/my-linter.yml/badge.svg)
+[![Actions Status](https://github.com/alexartoff/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/alexartoff/python-project-lvl1/actions) Hexlet tests and linter status
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/alexartoff/python-project-lvl1) CodeClimate Maintainability
+
+![Linter Flake8 workflow](https://github.com/alexartoff/python-project-lvl1/actions/workflows/my-linter.yml/badge.svg) Workflow linter test
+
 
 ### INTRO
 Учебный проект "Игры разума" онлайн-школы hexlet.io, состоящий из пяти консольных игр
