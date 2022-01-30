@@ -37,7 +37,7 @@ def check_num(num):
     вычисления по критериям простых чисел в булевом типе
     """
     out = {num: [True, ]}
-    for i in range(2, round(sqrt(num))):
+    for i in range(2, (round(sqrt(num)) + 1)):
         if num % i >= 1 and num > i:
             out[num].append(True)
         elif num % i == 0 and num > i:
