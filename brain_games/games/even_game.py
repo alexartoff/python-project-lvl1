@@ -1,19 +1,18 @@
 #!/usr/bin/env python
+from random import randint
 
 
-def is_even(num):
+def is_even():
     """
-    функция проверяет на четность число
-
-    Parameters
-    ----------
-    num - число для проверки
+    функция проверяет на четность рандомное число
 
     Returns
     -------
-    возвращает True если четное
+    возвращает "yes" если четное
     """
+    num = randint(1, 100)
+    print("Question:", num)
     if num % 2 == 0:
-        return True
+        return "yes"
     else:
-        return False
+        return "no"

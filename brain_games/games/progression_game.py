@@ -2,30 +2,27 @@
 from random import randint
 
 
-def progression(first, count, step):
+def progression():
     """
     формирует арифметическую прогрессию произвольной длины (от 5 до 10)
-    с произвольно пропущенным элементом (не крайним)
-
-    Parameters
-    ----------
-    first - первое число прогрессии\n
-    count - количество элементов прогрессии\n
-    step - шаг прогрессии
+    с произвольно пропущенным элементом (но не крайним)
 
     Returns
     -------
-    возвращает строку арифметической прогрессии с пропущенным элементом
-    и сам элемент
+    возвращает пропущенный элемент арифметической прогрессии
     """
+    first = randint(1, 10)
+    count = randint(5, 10)
+    step = randint(1, 10)
     skip = randint(2, (count - 2))
-    out_line = "{} ".format(str(first))
-    next_el = first
+    task_line = "{} ".format(str(first))
+    next_element = first
     for i in range(1, count):
-        next_el += step
+        next_element += step
         if i == skip:
-            out_line += ".. "
-            correct_answer = next_el
+            task_line += ".. "
+            correct_answer = next_element
         else:
-            out_line += "{} ".format(str(next_el))
-    return (out_line.strip(), correct_answer)
+            task_line += "{} ".format(str(next_element))
+    print("Question:", task_line.strip())
+    return str(correct_answer)

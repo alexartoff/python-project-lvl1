@@ -1,26 +1,25 @@
 #!/usr/bin/env python
 from math import sqrt
+from random import randint
 
 
-def is_prime(num):
+def is_prime():
     """
     функция проверяет словарь prime_dict, сформированный функцией
     check_num на наличие (value.count) ложных значений в словаре
 
-    Parameters
-    ----------
-    num - число для проверки
-
     Returns
     -------
-    возвращает True если число является простым
+    возвращает "yes" если число является простым
     """
+    num = randint(1, 100)
+    print("Question:", num)
     prime_dict = check_num(num)
     for value in prime_dict.values():
         if value.count(False) > 0:
-            return False
+            return "no"
         elif value.count(False) == 0:
-            return True
+            return "yes"
 
 
 def check_num(num):

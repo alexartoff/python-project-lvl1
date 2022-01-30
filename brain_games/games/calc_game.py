@@ -1,18 +1,22 @@
 #!/usr/bin/env python
+from random import randint, choice
+from operator import add, sub, mul
 
 
-def calculate(a, b, operand):
+def calculate():
     """
     функция выполняет арифмитические действия над часлами a, b
-    Parameters
-    ----------
-    a - число\n
-    b - число\n
-    operand - арифметический оператор
 
     Returns
     -------
     answer - результат арифметического действия
     """
-    answer = operand(a, b)
-    return answer
+    a = randint(1, 10)
+    b = randint(1, 10)
+    operands = {"+": add, "-": sub, "*": mul}
+    operands_str = ["+", "-", "*"]
+    oper = choice(operands_str)
+    task = ("{} {} {}".format(a, oper, b))
+    print("Question:", task)
+    correct_answer = operands[oper](a, b)
+    return str(correct_answer)
