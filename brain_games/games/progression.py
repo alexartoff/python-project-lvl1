@@ -2,14 +2,18 @@
 from random import randint
 
 
-def progression():
+TASK = 'What number is missing in the progression?'
+
+
+def game_mechanics():
     """
     формирует арифметическую прогрессию произвольной длины (от 5 до 10)
     с произвольно пропущенным элементом (но не крайним)
 
     Returns
     -------
-    возвращает пропущенный элемент арифметической прогрессии
+    возвращает пропущенный элемент арифметической прогрессии\n
+    question - строка-задание текущего раунда
     """
     first = randint(1, 10)
     count = randint(5, 10)
@@ -24,5 +28,5 @@ def progression():
             correct_answer = next_element
         else:
             task_line += "{} ".format(str(next_element))
-    print("Question:", task_line.strip())
-    return str(correct_answer)
+    question = task_line.strip()
+    return str(correct_answer), question

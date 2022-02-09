@@ -2,68 +2,70 @@ import prompt
 
 
 GAME_ROUND = 3
+WELCOME = 'Welcome to the Brain Games!'
 
 
-def welcome_message():
+def welcome_message(game_task):
     """
-    функция вывода приветствия
+    функция вывода приветствия, описания задания игры и
     запроса имени пользователя в переменную user_name
+
+    Parameters
+    ----------
+    game_task - получение описания задания игры
 
     Returns
     -------
     возвращает имя пользователя
     """
-    print('Welcome to the Brain Games!')
-    user_name = prompt.string('May I have your name? ')
-    if user_name:
-        print('Hello, {}!'.format(user_name))
-        return user_name
+    user_name = prompt.string(f'{WELCOME}\nMay I have your name? ')
+    print(f"Hello, {user_name}!\n{game_task}")
+    return user_name
 
 
-def start_game(game_task, get_correct_answer):
+def start_game(game):
     """
     Функция выводит приветствие, получает имя пользователя,
-    запускает выбранную пользователем игру и включает счетчик раундов\n
-    правильный ответ передаётся в функцию check_ans(), которая после проверки
-    возвращает True/False
+    запускает выбранную пользователем игру и включает счетчик раундов
 
     Parameters
     ----------
-    game_task - вывод описания задания игры\n
-    get_correct_answer - получение правильного ответа для последующей
-    передачи на проверку
+    game - получение данных из вызываемой игры таких как:\n
+    \tконстанта TASK и передача её в функцию welcome_message()\n
+    \tgame_mechanics - получение tuple содержащего:
+    \t\tправильный ответ (для последующей проверки)\n
+    \t\tстроку-задание для текущего раунда
     """
-    user_name = welcome_message()
-    print(game_task)
+    user_name = welcome_message(game.TASK)
     counter = 1
     while counter <= GAME_ROUND:
-        correct = get_correct_answer()
-        if check_ans(correct, user_name):
+        correct, question = game.game_mechanics()
+        answer = prompt.string(f'Question: {question}\nYour answer: ')
+        if answer == correct:
+            result_message(answer, correct, user_name, "correct")
             counter += 1
         else:
+            result_message(answer, correct, user_name, "lose")
             break
     else:
-        print("Congratulations, {}!".format(user_name))
+        result_message(answer, correct, user_name, "win")
 
 
-def check_ans(correct, user_name):
+def result_message(answer, correct, user_name, round_result):
     """
-    Функция проверяет ответ игрока и выводит соотвествующее сообщение
+    Функция выводит результаты игры
 
     Parameters
     ----------
-    correct - получение правильного ответа для проверки\n
-    user_name - имя пользователя
-
-    Returns
-    -------
-    возвращает True/False
+    answer - ответ игрока\n
+    correct - правильный ответ\n
+    user_name - имя игрока\n
+    round_result - результат проверки на правильность в раунде
     """
-    answer = prompt.string('Your answer: ')
-    if answer == correct:
-        print("Correct!")
-        return True
-    else:
-        print("'{}' is wrong answer ;(. Correct answer was '{}'.\n\
-Let's try again, {}!".format(answer, correct, user_name))
-        return False
+    game_results_dict = {
+        "correct": "Correct!",
+        "win": f"Congratulations, {user_name}!",
+        "lose": f"'{answer}' is wrong answer ;(. \
+Correct answer was '{correct}'.\nLet's try again, {user_name}!"
+    }
+    print(f'{game_results_dict[round_result]}')

@@ -1,6 +1,9 @@
 install:
 	poetry install
 
+install-force:
+	python3 -m pip install --force-reinstall
+
 brain-games:
 	poetry run brain-games
 
