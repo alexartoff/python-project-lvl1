@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.1.8"
+version = "0.1.10"
 description = "python-project-lvl1 - brain games"
 classifiers = [
     "Topic :: Software Development :: Build Tools",

@@ -5,16 +5,18 @@ from random import randint
 TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def game_mechanics():
+def get_data_from_game():
     """
     функция проверяет на четность рандомное число
 
     Returns
     -------
     возвращает "yes" если четное\n
-    num - строка-задание текущего раунда
+    question - строка-задание текущего раунда
     """
-    num = randint(1, 100)
-    if num % 2 == 0:
-        return "yes", str(num)
-    return "no", str(num)
+    min_number = 1
+    max_number = 100
+    question = randint(min_number, max_number)
+    if question % 2 == 0:
+        return "yes", str(question)
+    return "no", str(question)

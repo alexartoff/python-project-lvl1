@@ -6,20 +6,21 @@ from operator import add, sub, mul
 TASK = 'What is the result of the expression?'
 
 
-def game_mechanics():
+def get_data_from_game():
     """
-    функция выполняет арифмитические действия над часлами a, b
+    функция выполняет арифметические действия над числами a, b
 
     Returns
     -------
-    answer - результат арифметического действия\n
+    correct_answer - результат арифметического действия\n
     question - строка-задание текущего раунда
     """
-    a = randint(1, 10)
-    b = randint(1, 10)
-    operands = {"+": add, "-": sub, "*": mul}
-    operands_str = ["+", "-", "*"]
-    oper = choice(operands_str)
-    question = f"{a} {oper} {b}"
-    correct_answer = operands[oper](a, b)
+    min_number = 1
+    max_number = 10
+    a = randint(min_number, max_number)
+    b = randint(min_number, max_number)
+    operators = {"+": add, "-": sub, "*": mul}
+    current_operator = choice(list(operators.keys()))
+    question = f"{a} {current_operator} {b}"
+    correct_answer = operators[current_operator](a, b)
     return str(correct_answer), question

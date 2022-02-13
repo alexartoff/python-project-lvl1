@@ -5,7 +5,7 @@ from random import randint
 TASK = 'Find the greatest common divisor of given numbers.'
 
 
-def game_mechanics():
+def get_data_from_game():
     """
     функция находит наибольший общий делитель для двух чисел
 
@@ -14,8 +14,10 @@ def game_mechanics():
     возвращает НОД\n
     question - строка-задание текущего раунда
     """
-    a = randint(1, 100)
-    b = randint(1, 100)
+    min_number = 1
+    max_number = 100
+    a = randint(min_number, max_number)
+    b = randint(min_number, max_number)
     question = f"{a} {b}"
     while a != b:
         if a > b:
