@@ -5,7 +5,7 @@ from random import randint
 TASK = 'What number is missing in the progression?'
 
 
-def get_data_from_game():
+def get_question_and_answer():
     """
     формирует арифметическую прогрессию произвольной длины (от 5 до 10)
     с произвольно пропущенным элементом (но не крайним)
@@ -13,7 +13,7 @@ def get_data_from_game():
     Returns
     -------
     возвращает пропущенный элемент арифметической прогрессии\n
-    question - строка-задание текущего раунда
+    question - строка-вопрос текущего раунда
     """
     min_number = 1
     max_number = 10

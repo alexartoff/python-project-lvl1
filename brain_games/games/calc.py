@@ -6,14 +6,14 @@ from operator import add, sub, mul
 TASK = 'What is the result of the expression?'
 
 
-def get_data_from_game():
+def get_question_and_answer():
     """
     функция выполняет арифметические действия над числами a, b
 
     Returns
     -------
     correct_answer - результат арифметического действия\n
-    question - строка-задание текущего раунда
+    question - строка-вопрос текущего раунда
     """
     min_number = 1
     max_number = 10
